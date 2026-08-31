@@ -1,4 +1,4 @@
-import user from "../fixtures/login.json"
+import user from "../fixtures/usuario.json"
 
 
 describe('template spec', () => {
@@ -16,7 +16,11 @@ describe('template spec', () => {
     cy.loginAdmin("admin@biblioteca.com", "admin123")
   });
 
-  it.only('deve fazer login usando importação de dados', () => {
-    cy.login(user.email,user.senha)
+  it('deve fazer login usando importação de dados', () => {
+    cy.loginAdmin(user.email, user.senha)
+  });
+
+  it('deve fazer login usando usuario padrao', () => {
+    cy.loginAdmin(user.email2,user.senha2)
   });
 })
