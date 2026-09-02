@@ -21,8 +21,8 @@ preencherCadastro(nome,email,telefone,senha,confirmaSenha) {
 this.campoNome().clear().type(nome)
 this.campoEmail().clear().type(email)
 this.campoTelefone().clear().type(telefone)
-this.campoSenha().clear().type(senha)
-this.campoConfirmaSenha().clear().type(confirmaSenha)
+this.campoSenha().clear().type(senha,{log: false})
+this.campoConfirmaSenha().clear().type(confirmaSenha,{log: false})
 this.campoTermosCheck().check()
 this.botaoCriarConta().click()
 }
