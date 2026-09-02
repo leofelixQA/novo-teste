@@ -12,8 +12,11 @@ botaoCriarConta() {return cy.get('#register-btn')}
 
 //metodo
  visitarPaginaCadastro () {
-    cy.visit("register.htlm")
+    cy.visit("register.html")
  }
+visitarPaginaCatalogo() {
+   cy.visit("catalog.html")
+}
 preencherCadastro(nome,email,telefone,senha,confirmaSenha) {
 this.campoNome().clear().type(nome)
 this.campoEmail().clear().type(email)
@@ -23,9 +26,5 @@ this.campoConfirmaSenha().clear().type(confirmaSenha)
 this.campoTermosCheck().check()
 this.botaoCriarConta().click()
 }
-
-
-
-
 }
    export default new CadastroPage()

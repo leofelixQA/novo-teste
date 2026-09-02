@@ -1,11 +1,14 @@
-import cadastroPage from "../support/pages/cadastro-page"
 import { faker } from '@faker-js/faker';
-describe('funcionalidade: cadastro', () => {
+import cadastro from "../support/pages/cadastro-page"
+describe('Funcionalidade :cadastro', () => {
     beforeEach(() => {
-        cy.visit("register.html")
+        cadastro.visitarPaginaCadastro()
     });
-    it.only('deve fazer cadastro com  sucesso', () => {
-       let email = faker.internet.email()
-        cadastroPage.preencherCadastro("nardo",email,"11922345678","teste123","teste123")
+    it('deve fazer cadastro com sucesso', () => {
+     let nome = faker.person.fullName()
+     let email = faker.internet.email()
+     let telefone = faker.phone.number()
+
+        cadastro.preencherCadastro(nome,email,telefone,"senha123","senha123")
     });
 });
