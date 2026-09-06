@@ -23,4 +23,5 @@ describe('template spec', () => {
   it('deve fazer login usando usuario padrao', () => {
     cy.loginAdmin(user.email2,user.senha2)
   });
+  
 })

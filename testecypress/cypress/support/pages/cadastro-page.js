@@ -18,7 +18,7 @@ visitarPaginaCatalogo() {
    cy.visit("catalog.html")
 }
 preencherCadastro(nome,email,telefone,senha,confirmaSenha) {
-this.campoNome().clear().type(nome)
+if(nome) this.campoNome().clear().type(nome)
 this.campoEmail().clear().type(email)
 this.campoTelefone().clear().type(telefone)
 this.campoSenha().clear().type(senha,{log: false})
